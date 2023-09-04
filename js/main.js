@@ -9,8 +9,16 @@ function makeYellow(){
     document.body.style.backgroundColor = 'yellow';
 }
 
-const goldenBtn = document.querySelector('#make-golden');
+// const goldenBtn = document.querySelector('#make-golden');
 // console.log(goldenBtn);
-goldenBtn.onclick = function(){
-    document.body.style.backgroundColor = "gold";
-}
+// goldenBtn.onclick = function(){
+//     document.body.style.backgroundColor = "gold";
+// }
+
+// goldenBtn.addEventListener('click',()=>{
+//     document.body.style.backgroundColor = 'pink';
+// })
+
+document.querySelector('#make-golden').addEventListener('click',()=>{
+    document.body.style.backgroundColor ="pink";
+})
