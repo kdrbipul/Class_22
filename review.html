@@ -8,14 +8,24 @@
 </head>
 <body>
     <section>
-        <div>
+        <div class="comments">
             <h1>Enter Your Comment</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem harum facilis aperiam consectetur minima temporibus perferendis quisquam? Et, id nostrum.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae perferendis suscipit optio unde saepe molestias? Obcaecati libero tempora fugit dolorum!</p>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <button>Post</button>
+            <textarea name="" id="comment" cols="30" rows="10"></textarea>
+            <button id="post">Post</button>
         </div>
     </section>
+    <script>
+        const post = document.querySelector('#post');
+        // console.log(post);
+        post.addEventListener('click', function(){
+            // console.log('clicked');
+            const commentField = document.getElementById('comment');
+            const comment = commentField.value;
+            // console.log(comment);
+        });
+    </script>
     
 </body>
 </html>
