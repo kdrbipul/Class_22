@@ -24,6 +24,14 @@
             const commentField = document.getElementById('comment');
             const comment = commentField.value;
             // console.log(comment);
+            const commentsContainer = document.querySelector('.comments');
+            // console.log(commentsContainer);
+            const p = document.createElement('p');
+            // console.log(p);
+            p.innerText = comment;
+            // console.log(p);
+            commentsContainer.appendChild(p);
+            commentField.value = '';
         });
     </script>
     
