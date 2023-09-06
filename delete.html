@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+<body>
+    <section>
+        <h1>Delete Our Comment</h1>
+        <p id="secret">This is my comment</p>
+        <input type="text" id="delete-confirmation">
+        <button disabled id="delete">Delete</button>
+    </section>
+
+
+
+    <script>
+        
+        document.getElementById('delete-confirmation').addEventListener('keyup', function(event){
+            const deleteField = event.target.value;
+            const dltBtn = document.getElementById('delete');
+            // console.log(deleteField);
+            event.target.value='';
+            if(deleteField == 'delete'){
+            // console.log(dltBtn);
+                dltBtn.removeAttribute('disabled');
+                dltBtn.addEventListener('click', function(){
+                    document.getElementById('secret').style.display = 'none';
+                })
+            }else{
+                dltBtn.setAttribute('disabled', true)
+            }
+        })
+        
+        
+        
+        // document.getElementById("delete").addEventListener('click', function(){
+        //     document.getElementById('secret').style.display ='none';
+        // });
+    </script>
+</body>
+</html>
